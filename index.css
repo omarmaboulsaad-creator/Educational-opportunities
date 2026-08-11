@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --primary: #4A5D4E;
+    --primary-hover: #3B4A3E;
+    --primary-light: #EFF3EF;
+    --primary-border: #C4D1C6;
+    --primary-text: #2A3A2D;
+    --bg-page: #F7F6F2;
+    --bg-card: #FFFFFF;
+    --text-main: #2D2D1E;
+    --text-muted: #5A5A40;
+    --border-subtle: #E5E4DE;
+    --accent-badge: #EFECE6;
+  }
+
+  /* Dark mode */
+  [data-theme="dark"] {
+    --bg-page: #1A1B16;
+    --bg-card: #24251F;
+    --text-main: #F4F3EF;
+    --text-muted: #A3A292;
+    --border-subtle: #3B3C34;
+    --accent-badge: #31322A;
+  }
+
+  /* Color themes - Green (Natural Sage & Olive Earth) */
+  [data-color="green"] {
+    --primary: #4A5D4E;
+    --primary-hover: #3B4A3E;
+    --primary-light: #EFF3EF;
+    --primary-border: #C4D1C6;
+    --primary-text: #2A3A2D;
+  }
+  [data-color="green"][data-theme="dark"] {
+    --primary-light: #2A3A2D;
+    --primary-border: #3B4A3E;
+    --primary-text: #A3C9A8;
+  }
+
+  /* Blue (River Stone & Slate) */
+  [data-color="blue"] {
+    --primary: #385E72;
+    --primary-hover: #2B4B5C;
+    --primary-light: #EEF4F7;
+    --primary-border: #B9D1DC;
+    --primary-text: #1F3947;
+  }
+  [data-color="blue"][data-theme="dark"] {
+    --primary-light: #1F3947;
+    --primary-border: #2B4B5C;
+    --primary-text: #9ECBE2;
+  }
+
+  /* Red (Terracotta & Clay) */
+  [data-color="red"] {
+    --primary: #A35D40;
+    --primary-hover: #854830;
+    --primary-light: #FAF2EE;
+    --primary-border: #E8CEC2;
+    --primary-text: #663420;
+  }
+  [data-color="red"][data-theme="dark"] {
+    --primary-light: #4A2B1E;
+    --primary-border: #6E3A25;
+    --primary-text: #EBB8A5;
+  }
+
+  /* Orange (Warm Sand & Amber Ochre) */
+  [data-color="orange"] {
+    --primary: #B87B31;
+    --primary-hover: #986120;
+    --primary-light: #FAF4EB;
+    --primary-border: #E6D3B8;
+    --primary-text: #6E4416;
+  }
+  [data-color="orange"][data-theme="dark"] {
+    --primary-light: #45311B;
+    --primary-border: #6A4A28;
+    --primary-text: #E8C697;
+  }
+
+  body {
+    background-color: var(--bg-page);
+    color: var(--text-main);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+}
+
+/* Custom CSS classes referencing CSS variables */
+.bg-page {
+  background-color: var(--bg-page);
+}
+
+.bg-card {
+  background-color: var(--bg-card);
+}
+
+.text-main {
+  color: var(--text-main);
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.border-subtle {
+  border-color: var(--border-subtle);
+}
+
+.bg-primary-main {
+  background-color: var(--primary);
+}
+
+.bg-primary-main:hover {
+  background-color: var(--primary-hover);
+}
+
+.text-primary-main {
+  color: var(--primary);
+}
+
+.bg-primary-light {
+  background-color: var(--primary-light);
+}
+
+.border-primary-main {
+  border-color: var(--primary);
+}
+
+.border-primary-subtle {
+  border-color: var(--primary-border);
+}
+
+.text-primary-dark {
+  color: var(--primary-text);
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: #475569;
+}

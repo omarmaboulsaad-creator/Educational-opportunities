@@ -1,0 +1,6 @@
+{
+  "name": "Educational Opportunities",
+  "description": "A simple, clean prototype platform to discover courses, scholarships, internships, fellowships, grants, and competitions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
